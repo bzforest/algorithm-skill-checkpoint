@@ -1,6 +1,20 @@
+{/*
+- You are given an array of student objects, where each object contains an `id` and a `name`.
+- Write a function `findStudentById(students, id)` that takes this array and a student ID and returns the student object with the matching ID **using the linear search algorithm**.
+- If no student with the given ID is found, return `null`.
+*/}
+
 function findStudentById(students, id) {
-  // Your code here
+  
+  for (let i = 0; i < students.length; i++) {
+    if (students[i].id === id) {
+      // return [`id: ${students[i].id} , name: ${students[i].name}`]
+      return students[i]
+    }
+  }
+  return null
 }
+//  bigO ข้อนี้ เท่ากับ O(n) เพราะเป็น loop ชั้นเดียว
 
 // Test case
 const students = [
